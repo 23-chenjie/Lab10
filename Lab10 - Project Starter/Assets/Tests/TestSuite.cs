@@ -55,5 +55,20 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "/");
             Assert.AreEqual(result, 2.5f);
         }
+
+        [Test]
+        public void TestMultiplication()
+        {
+            result = Calculator.CalculatePair(9,2, "*");
+            Assert.AreEqual(result, 18f);
+        }
+        [UnityTest]
+        public IEnumerator TestSuiteMultiplication()
+        {
+            yield return null;
+
+            result = Calculator.CalculatePair(9,2, "*");
+            Assert.AreEqual(result, 18f);
+        }
     }
 }
