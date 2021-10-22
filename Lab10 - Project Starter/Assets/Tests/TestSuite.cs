@@ -70,5 +70,35 @@ namespace Tests
             result = Calculator.CalculatePair(9,2, "*");
             Assert.AreEqual(result, 18f);
         }
+
+        [Test]
+        public void TestRemainder()
+        {
+            result = Calculator.CalculatePair(9,2, "%");
+            Assert.AreEqual(result, 1f);
+        }
+        [UnityTest]
+        public IEnumerator TestSuiteRemainder()
+        {
+            yield return null;
+
+            result = Calculator.CalculatePair(9,2, "%");
+            Assert.AreEqual(result, 1f);
+        }
+
+        [Test]
+        public void TestPower()
+        {
+            result = Calculator.CalculatePair(9,2, "^");
+            Assert.AreEqual(result, 81f);
+        }
+        [UnityTest]
+        public IEnumerator TestSuitePower()
+        {
+            yield return null;
+
+            result = Calculator.CalculatePair(9,2, "^");
+            Assert.AreEqual(result, 81f);
+        }
     }
 }
